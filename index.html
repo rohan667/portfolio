@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rohan Joseph | Cybersecurity and Web</title>
+<meta name="description" content="Portfolio of Rohan Joseph, computer engineering student in Warsaw working in cyber threat intelligence, ethical hacking and web design.">
+<meta name="theme-color" content="#020204">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#020204;--cob:#1E4DFF;--cob2:#5A84FF;--lime:#C6FF00;--tx:#F4F6FF;--mu:#9AA3C7;--ln:rgba(90,132,255,.3)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--tx);font:400 18px/1.6 "DM Sans",system-ui,sans-serif;overflow-x:hidden}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:1;background:radial-gradient(ellipse at center,transparent 50%,rgba(2,2,4,.9))}
+.nogl{background:radial-gradient(circle at 70% 30%,#0a2a9a,#020204 60%)}
+.nogl #gl{display:none}
+#gl{position:fixed;inset:0;width:100%;height:100%;z-index:0;display:block}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",sans-serif;line-height:1.02;letter-spacing:-.025em}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--lime);outline-offset:3px}
+.mono{font:500 14px "JetBrains Mono",ui-monospace,monospace;color:var(--lime);letter-spacing:.04em}
+.wrap{width:min(1180px,92%);margin:0 auto}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--lime),var(--cob));z-index:100}
+header{position:fixed;top:0;left:0;right:0;z-index:50;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);background:rgba(2,2,4,.55);border-bottom:1px solid var(--ln)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:800 24px "Bricolage Grotesque",sans-serif}
+.logo i{font-style:normal;color:var(--lime)}
+.links{display:flex;gap:30px}
+.links a{color:var(--mu);font-size:16px;font-weight:500;transition:color .2s}
+.links a:hover{color:var(--lime)}
+#burger{display:none;width:44px;height:44px;border-radius:50%;border:1px solid var(--ln);background:transparent;color:var(--tx);font-size:18px;cursor:pointer}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font:700 17px "DM Sans",sans-serif;border:2px solid var(--lime);background:var(--lime);color:#050507;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 34px -4px var(--lime)}
+.btn.o{background:rgba(2,2,4,.4);color:var(--tx);border-color:var(--cob2)}
+.btn.o:hover{border-color:var(--lime);box-shadow:none}
+section{position:relative;z-index:2;min-height:100vh;display:flex;align-items:center;padding:110px 0}
+.glass{background:rgba(5,8,22,.55);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--ln);border-radius:24px;padding:28px;transition:border-color .25s}
+.glass:hover{border-color:var(--lime)}
+h1{font-size:clamp(48px,8vw,112px);font-weight:800}
+h2{font-size:clamp(34px,5.4vw,72px);font-weight:800;margin:10px 0 36px}
+h3{font-size:26px;margin:14px 0 8px}
+p{color:var(--mu)}
+.hg{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.rl{display:flex;align-items:center;gap:4px;margin:20px 0 14px}
+.role{font:500 clamp(22px,2.6vw,34px)/1.3 "Bricolage Grotesque",sans-serif;min-height:1.4em;background:linear-gradient(90deg,var(--lime),var(--cob2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.caret{width:3px;height:1.3em;background:var(--lime);animation:bl 1s steps(2) infinite}
+@keyframes bl{50%{opacity:0}}
+.lead{max-width:540px;font-size:20px}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.soc{display:flex;gap:26px;flex-wrap:wrap;margin-top:26px;font-size:16px;color:var(--mu)}
+.soc a{border-bottom:1px solid var(--ln);transition:color .2s}.soc a:hover{color:var(--lime)}
+.pc{position:relative;isolation:isolate;justify-self:center;width:min(440px,100%);transform-style:preserve-3d;will-change:transform}
+.pc::before{content:"";position:absolute;inset:22px -22px -22px 22px;border-radius:28px;background:var(--cob);z-index:-1}
+.frame{aspect-ratio:4/5;border-radius:28px;overflow:hidden;border:3px solid var(--lime);background:#000}
+.frame img{width:100%;height:100%;object-fit:cover;display:block}
+.chip{position:absolute;background:rgba(5,8,22,.85);border:1px solid var(--ln);border-radius:14px;padding:9px 15px;font-size:14px;font-weight:700;animation:fl 6s ease-in-out infinite}
+.c1{top:8%;left:-40px}.c2{bottom:16%;right:-34px;animation-delay:-2s}.c3{bottom:-16px;left:14%;animation-delay:-4s}
+@keyframes fl{50%{transform:translateY(-10px)}}
+.about{display:grid;grid-template-columns:1.25fr .75fr;gap:22px}
+.big{font:500 clamp(22px,2.6vw,32px)/1.3 "Bricolage Grotesque",sans-serif;color:var(--tx)}
+.fact{padding:14px 0;border-bottom:1px solid var(--ln)}.fact:last-child{border:0}
+.fact b{display:block;font:500 13px "JetBrains Mono",monospace;color:var(--lime)}
+.g3,.g2,.g4{display:grid;gap:20px}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.ico{width:52px;height:52px;display:block}
+.creds{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.cred{background:rgba(5,8,22,.55);backdrop-filter:blur(10px);border:1px solid var(--ln);border-radius:16px;padding:12px 18px;font-weight:700;font-size:16px}
+.cred span{display:block;font-weight:400;font-size:14px;color:var(--mu)}
+.proj img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:14px;display:block;background:#050816}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 16px}
+.tag{font:500 12px "JetBrains Mono",monospace;border:1px solid var(--ln);border-radius:999px;padding:3px 12px;color:var(--cob2)}
+.lnk{font-weight:700;color:var(--lime)}
+.step b{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--lime);color:#050507;font:800 22px "Bricolage Grotesque",sans-serif}
+.close{text-align:center;padding:clamp(36px,6vw,80px) 24px}
+.close h2{margin:10px 0 14px}
+.close .cta{justify-content:center;margin-top:28px}
+.mailline{margin-top:22px;color:var(--tx);font-size:18px}
+footer{position:relative;z-index:2;padding:34px 0;border-top:1px solid var(--ln);color:var(--mu);font-size:15px;background:rgba(2,2,4,.8)}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.hud{position:fixed;left:22px;bottom:20px;z-index:60;font:500 12px "JetBrains Mono",monospace;color:var(--lime);line-height:1.7;pointer-events:none;mix-blend-mode:screen}
+.hud span{color:var(--mu)}
+#cur{position:fixed;left:0;top:0;width:34px;height:34px;border:2px solid var(--lime);border-radius:50%;z-index:200;pointer-events:none;transition:width .2s,height .2s,background .2s;mix-blend-mode:difference}
+#cur.big{width:64px;height:64px;background:rgba(198,255,0,.25)}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+@media(max-width:1000px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:1fr 1fr}}
+@media(max-width:860px){
+ .hg,.about{grid-template-columns:1fr}
+ .pc{width:min(300px,76%);order:-1}.c1{left:-12px}.c2{right:-12px}
+ #burger{display:grid;place-items:center}
+ .links{display:none;position:absolute;top:68px;left:0;right:0;flex-direction:column;gap:6px;background:rgba(2,2,4,.95);padding:18px 4%}
+ .links.open{display:flex}.links a{font-size:20px;padding:8px 0}
+ section{padding:90px 0}.hud{display:none}
+}
+@media(max-width:640px){.g2,.g3,.g4{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<canvas id="gl" aria-hidden="true"></canvas>
+<div id="bar"></div><div id="cur"></div>
+<div class="hud">DEPTH <span id="dp">0000</span> m<br>SCAN <span id="sc">000</span>%</div>
+
+<header>
+<div class="wrap nav">
+<a class="logo" href="#top">RJ<i>.</i></a>
+<nav class="links" id="links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#approach">Approach</a><a href="#contact">Contact</a></nav>
+<button id="burger" aria-label="Open menu">☰</button>
+</div>
+</header>
+
+<main id="top">
+<section id="hero">
+<div class="wrap hg">
+<div>
+<span class="mono">// WARSAW, POLAND</span>
+<h1 id="name" data-t="Rohan Joseph">Rohan Joseph</h1>
+<div class="rl"><span class="role" id="role"></span><span class="caret"></span></div>
+<p class="lead">Computer engineering student. I study how attacks work so I can build web projects that stand up to them.</p>
+<div class="cta"><a class="btn" href="#projects">See my projects</a><a class="btn o" href="#contact">Get in touch</a></div>
+<div class="soc"><a href="mailto:rohanjoseph667@gmail.com">rohanjoseph667@gmail.com</a><a href="https://www.instagram.com/__rohan_joseph_/" target="_blank" rel="noopener">Instagram @__rohan_joseph_</a></div>
+</div>
+<div class="pc" id="pc">
+<div class="frame"><img src="assets/photo-full.jpg" alt="Portrait of Rohan Joseph" onerror="this.onerror=null;this.src='assets/photo.jpg'"></div>
+<div class="chip c1">arcX Cyber Threat Intelligence Analyst</div>
+<div class="chip c2">Cisco Ethical Hacker badge</div>
+<div class="chip c3">Vistula University</div>
+</div>
+</div>
+</section>
+
+<section id="about">
+<div class="wrap">
+<span class="mono rv">// 01 ABOUT</span>
+<h2 class="scr rv">Who’s behind the screen</h2>
+<div class="about rv">
+<div class="glass"><p class="big">I’m a cybersecurity enthusiast and ethical hacker. I study computer engineering, build tools on GitHub and design websites. I also founded the Cypher Nexus cyber community.</p></div>
+<div class="glass">
+<div class="fact"><b>STUDYING</b>BE Computer Engineering, Vistula University</div>
+<div class="fact"><b>EARLIER</b>Carmel CMI School, Shoranur</div>
+<div class="fact"><b>FOUNDED</b>Cypher Nexus cyber community</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="skills">
+<div class="wrap">
+<span class="mono rv">// 02 SKILLS</span>
+<h2 class="scr rv">What I do</h2>
+<div class="g3">
+<div class="rv"><div class="glass tilt"><svg class="ico" viewBox="0 0 72 72"><circle cx="30" cy="30" r="18" fill="none" stroke="#C6FF00" stroke-width="6"/><line x1="44" y1="44" x2="64" y2="64" stroke="#C6FF00" stroke-width="6" stroke-linecap="round"/></svg><h3>Threat intelligence</h3><p>Foundation Level Cyber Threat Intelligence Analyst, certified by arcX.</p></div></div>
+<div class="rv"><div class="glass tilt"><svg class="ico" viewBox="0 0 72 72"><path d="M36 6 L62 16 V38 Q62 58 36 68 Q10 58 10 38 V16 Z" fill="none" stroke="#5A84FF" stroke-width="6"/><path d="M24 36 L33 45 L50 26" fill="none" stroke="#5A84FF" stroke-width="6" stroke-linecap="round"/></svg><h3>Ethical hacking</h3><p>Holder of the Cisco Ethical Hacker badge, with a hands-on interest in security.</p></div></div>
+<div class="rv"><div class="glass tilt"><svg class="ico" viewBox="0 0 72 72"><rect x="8" y="12" width="56" height="44" rx="8" fill="none" stroke="#C6FF00" stroke-width="6"/><line x1="8" y1="26" x2="64" y2="26" stroke="#C6FF00" stroke-width="6"/><line x1="26" y1="64" x2="46" y2="64" stroke="#C6FF00" stroke-width="6" stroke-linecap="round"/></svg><h3>Web design</h3><p>I design and build websites, and I check how secure they are.</p></div></div>
+</div>
+<div class="creds rv">
+<div class="cred">arcX<span>Cyber Threat Intelligence Analyst, Foundation</span></div>
+<div class="cred">Cisco<span>Ethical Hacker badge</span></div>
+<div class="cred">Mastercard<span>Cybersecurity job simulation</span></div>
+<div class="cred">JP Morgan<span>Cybersecurity job simulation</span></div>
+<div class="cred">TCS<span>Cybersecurity job simulation</span></div>
+</div>
+</div>
+</section>
+
+<section id="projects">
+<div class="wrap">
+<span class="mono rv">// 03 PROJECTS</span>
+<h2 class="scr rv">Things I’ve built</h2>
+<div class="g2">
+<div class="rv"><article class="glass proj tilt"><img data-art="0" alt="Secure Access Atlas"><h3>Secure Access Atlas</h3><p>An accessibility reporting app with privacy safeguards and human approval.</p><div class="tags"><span class="tag">ACCESSIBILITY</span><span class="tag">PRIVACY</span><span class="tag">HUMAN APPROVAL</span></div><a class="lnk" href="https://github.com/rohan667" target="_blank" rel="noopener">View on GitHub →</a></article></div>
+<div class="rv"><article class="glass proj tilt"><img data-art="1" alt="PhishScope"><h3>PhishScope</h3><p>A phishing email analyzer with explainable scoring and tests.</p><div class="tags"><span class="tag">PHISHING</span><span class="tag">EXPLAINABLE SCORING</span><span class="tag">TESTS</span></div><a class="lnk" href="https://github.com/rohan667" target="_blank" rel="noopener">View on GitHub →</a></article></div>
+<div class="rv"><article class="glass proj tilt"><img data-art="2" alt="Matrix Layout Break-Even"><h3>Matrix Layout Break-Even</h3><p>A performance experiment comparing matrix layouts against a timing model.</p><div class="tags"><span class="tag">PERFORMANCE</span><span class="tag">TIMING MODEL</span></div><a class="lnk" href="https://github.com/rohan667" target="_blank" rel="noopener">View on GitHub →</a></article></div>
+<div class="rv"><article class="glass proj tilt"><img data-art="3" alt="Cypher Nexus"><h3>Cypher Nexus</h3><p>A cyber community I founded for people who want to learn security.</p><div class="tags"><span class="tag">COMMUNITY</span><span class="tag">FOUNDER</span></div><a class="lnk" href="#contact">Ask me about it →</a></article></div>
+</div>
+</div>
+</section>
+
+<section id="approach">
+<div class="wrap">
+<span class="mono rv">// 04 APPROACH</span>
+<h2 class="scr rv">How I work</h2>
+<div class="g4">
+<div class="rv"><div class="glass step"><b>1</b><h3>Investigate</h3><p>I start from the threat or the problem, then pick the tool.</p></div></div>
+<div class="rv"><div class="glass step"><b>2</b><h3>Explain</h3><p>Scores and results come with reasons a person can read.</p></div></div>
+<div class="rv"><div class="glass step"><b>3</b><h3>Test</h3><p>Detection logic is backed by tests, not by guesses.</p></div></div>
+<div class="rv"><div class="glass step"><b>4</b><h3>Protect</h3><p>Privacy safeguards and human approval are part of the design.</p></div></div>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<div class="wrap rv">
+<div class="glass close">
+<span class="mono">// 05 CONTACT</span>
+<h2 class="scr">Let’s talk security</h2>
+<p>Find my code on GitHub, or get in touch about a project.</p>
+<div class="cta">
+<a class="btn" href="mailto:rohanjoseph667@gmail.com">Email me</a>
+<a class="btn o" href="https://www.instagram.com/__rohan_joseph_/" target="_blank" rel="noopener">Instagram</a>
+<a class="btn o" href="https://github.com/rohan667" target="_blank" rel="noopener">GitHub</a>
+</div>
+<p class="mailline">rohanjoseph667@gmail.com</p>
+</div>
+</div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© <span id="yr"></span> Rohan Joseph, Warsaw, Poland</span><a href="#top">Back to the surface ↑</a></div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches,fine=matchMedia('(hover:hover)').matches;
+let mx=0,my=0;
+addEventListener('pointermove',e=>{mx=e.clientX/innerWidth*2-1;my=e.clientY/innerHeight*2-1});
+$('#yr').textContent=new Date().getFullYear();
+$('#burger').onclick=()=>$('#links').classList.toggle('open');
+$$('#links a').forEach(a=>a.onclick=()=>$('#links').classList.remove('open'));
+
+/* decrypt text effect */
+const CH='!<>-_\\/[]{}=+*^?#01';
+function scr(el){const t=el.dataset.t||(el.dataset.t=el.textContent);if(reduce){el.textContent=t;return}
+ let f=0;const id=setInterval(()=>{f++;el.textContent=[...t].map((c,i)=>c===' '?' ':(i<f/1.6?c:CH[Math.random()*CH.length|0])).join('');if(f>t.length*1.6+2){el.textContent=t;clearInterval(id)}},30)}
+scr($('#name'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');if(e.target.classList.contains('scr'))scr(e.target);io.unobserve(e.target)}}),{threshold:.15});
+$$('.rv').forEach((e,i)=>{e.style.transitionDelay=(i%3)*70+'ms';io.observe(e)});
+
+/* typed roles */
+const roles=['Cyber threat intelligence','Ethical hacking','Phishing analysis','Web design'],rt=$('#role');
+let ri=0,ci=0,del=false;
+function type(){const w=roles[ri];ci+=del?-1:1;rt.textContent=w.slice(0,ci);let d=del?35:70;
+ if(!del&&ci===w.length){del=true;d=1400}else if(del&&ci===0){del=false;ri=(ri+1)%roles.length;d=300}setTimeout(type,d)}
+reduce?rt.textContent=roles[0]:type();
+
+/* cursor ring + card tilt */
+if(fine&&!reduce){const cur=$('#cur');let a=0,b=0,tx=0,ty=0;
+ addEventListener('pointermove',e=>{tx=e.clientX;ty=e.clientY});
+ (function f(){a+=(tx-a)*.18;b+=(ty-b)*.18;cur.style.transform=`translate(${a}px,${b}px) translate(-50%,-50%)`;requestAnimationFrame(f)})();
+ document.addEventListener('pointerover',e=>cur.classList.toggle('big',!!e.target.closest('a,button')));
+ $$('.tilt').forEach(c=>{c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform=`perspective(900px) rotateY(${x*8}deg) rotateX(${-y*8}deg) translateY(-4px)`});c.addEventListener('mouseleave',()=>c.style.transform='')})
+}else $('#cur').remove();
+
+/* project artwork drawn in the page */
+$$('img[data-art]').forEach(im=>{const i=+im.dataset.art,[a,b]=[['#C6FF00','#1E4DFF'],['#5A84FF','#C6FF00'],['#C6FF00','#0A2FD0'],['#1E4DFF','#C6FF00']][i];
+ let s=3+i*11;const r=()=>(s=s*16807%2147483647)/2147483647,w=700,h=394;let x='';
+ for(let k=0;k<w;k+=40)x+=`<line x1="${k}" y1="0" x2="${k}" y2="${h}" stroke="#fff" stroke-opacity=".05"/>`;
+ for(let k=0;k<14;k++)x+=`<circle cx="${r()*w|0}" cy="${r()*h|0}" r="${8+r()*50|0}" fill="none" stroke="${a}" stroke-opacity="${(.12+r()*.3).toFixed(2)}" stroke-width="3"/>`;
+ if(i===0)x+=`<path d="M350 77L445 117V207Q445 287 350 327Q255 287 255 207V117Z" fill="${a}" fill-opacity=".16" stroke="${a}" stroke-width="6"/><path d="M310 197L340 232L395 167" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>`;
+ if(i===1){for(let k=0;k<7;k++){const bh=40+r()*150;x+=`<rect x="${175+k*52}" y="${300-bh}" width="34" height="${bh}" rx="8" fill="${a}" fill-opacity="${(.4+r()*.5).toFixed(2)}"/>`}x+=`<rect x="260" y="60" width="180" height="100" rx="14" fill="#fff" fill-opacity=".92"/><path d="M260 60L350 115L440 60" fill="none" stroke="${b}" stroke-width="6"/>`}
+ if(i===2){for(let y=0;y<4;y++)for(let c=0;c<6;c++)x+=`<rect x="${215+c*48}" y="${107+y*48}" width="40" height="40" rx="8" fill="${a}" fill-opacity="${(.15+r()*.8).toFixed(2)}"/>`}
+ if(i===3){const P=Array.from({length:9},()=>[60+r()*(w-120),60+r()*(h-120)]);P.forEach((p,k)=>P.forEach((q,j)=>{if(j>k&&r()>.55)x+=`<line x1="${p[0]|0}" y1="${p[1]|0}" x2="${q[0]|0}" y2="${q[1]|0}" stroke="${a}" stroke-opacity=".6" stroke-width="3"/>`}));P.forEach(p=>x+=`<circle cx="${p[0]|0}" cy="${p[1]|0}" r="14" fill="${a}"/><circle cx="${p[0]|0}" cy="${p[1]|0}" r="6" fill="#050507"/>`)}
+ im.src='data:image/svg+xml,'+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}"><defs><radialGradient id="g" cx=".8" cy=".15" r=".95"><stop offset="0" stop-color="${b}" stop-opacity=".95"/><stop offset="1" stop-color="#050507"/></radialGradient></defs><rect width="${w}" height="${h}" fill="url(#g)"/>${x}</svg>`)});
+
+/* ---------- 3D: fly through a data tunnel, one set piece per section ---------- */
+try{
+const R=new THREE.WebGLRenderer({canvas:$('#gl'),antialias:true});
+R.setPixelRatio(Math.min(devicePixelRatio,2));
+const S=new THREE.Scene();S.background=new THREE.Color(0x020204);S.fog=new THREE.FogExp2(0x020204,.02);
+const cam=new THREE.PerspectiveCamera(65,1,.1,400);
+const LIME=0xC6FF00,COB=0x1E4DFF,COB2=0x5A84FF,GAP=44;
+const wire=(g,c,o=1)=>new THREE.LineSegments(new THREE.EdgesGeometry(g),new THREE.LineBasicMaterial({color:c,transparent:true,opacity:o}));
+const wf=(g,c,o=.8)=>new THREE.Mesh(g,new THREE.MeshBasicMaterial({color:c,wireframe:true,transparent:true,opacity:o}));
+
+const rings=[];
+for(let i=0;i<72;i++){const m=new THREE.Mesh(new THREE.TorusGeometry(7+(i%3)*.8,.035,6,72),new THREE.MeshBasicMaterial({color:i%6?COB:LIME,transparent:true,opacity:i%6?.5:.9}));m.position.z=-i*4.2;m.rotation.z=i*.3;S.add(m);rings.push(m)}
+
+const pc=innerWidth<700?900:2200,pa=new Float32Array(pc*3),ca=new Float32Array(pc*3),cl=new THREE.Color();
+for(let i=0;i<pc;i++){pa.set([(Math.random()-.5)*34,(Math.random()-.5)*34,-Math.random()*300],i*3);cl.set(Math.random()>.7?LIME:COB2);ca.set([cl.r,cl.g,cl.b],i*3)}
+const pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.BufferAttribute(pa,3));pg.setAttribute('color',new THREE.BufferAttribute(ca,3));
+S.add(new THREE.Points(pg,new THREE.PointsMaterial({size:.09,vertexColors:true,transparent:true,opacity:.9})));
+
+const pieces=[];
+function piece(i,x,build){const g=new THREE.Group();g.userData.x=x;g.position.set(x,0,-i*GAP-14);build(g);S.add(g);pieces.push(g)}
+piece(0,6.5,g=>{g.add(wire(new THREE.IcosahedronGeometry(3.4,1),LIME));g.add(new THREE.Mesh(new THREE.IcosahedronGeometry(1.6,0),new THREE.MeshBasicMaterial({color:COB})));const o=new THREE.Mesh(new THREE.TorusGeometry(4.8,.03,6,90),new THREE.MeshBasicMaterial({color:COB2}));o.rotation.x=1.2;g.add(o)});
+piece(1,-6.5,g=>g.add(wf(new THREE.TorusKnotGeometry(2.4,.65,120,12),LIME,.7)));
+piece(2,6.5,g=>{[[new THREE.OctahedronGeometry(1.5),LIME,3.4],[new THREE.DodecahedronGeometry(1.5),COB2,0],[new THREE.TetrahedronGeometry(1.7),LIME,-3.4]].forEach(([geo,c,y])=>{const m=wire(geo,c);m.position.y=y;g.add(m)})});
+piece(3,-6.5,g=>{const e=new THREE.EdgesGeometry(new THREE.BoxGeometry(.8,.8,.8)),a=new THREE.LineBasicMaterial({color:COB2}),b=new THREE.LineBasicMaterial({color:LIME});
+ for(let x=0;x<4;x++)for(let y=0;y<4;y++)for(let z=0;z<4;z++){const l=new THREE.LineSegments(e,(x+y+z)%5?a:b);l.position.set((x-1.5)*1.4,(y-1.5)*1.4,(z-1.5)*1.4);g.add(l)}});
+piece(4,6.5,g=>{g.add(new THREE.Points(new THREE.SphereGeometry(3.2,30,20),new THREE.PointsMaterial({color:LIME,size:.09})));g.add(wf(new THREE.SphereGeometry(3.2,14,10),COB,.35))});
+piece(5,0,g=>{g.add(wire(new THREE.IcosahedronGeometry(5.5,2),COB,.8));g.add(wire(new THREE.IcosahedronGeometry(2.6,1),LIME))});
+
+const secs=$$('main section');let centers=[];
+const meas=()=>{centers=secs.map(s=>s.offsetTop+s.offsetHeight/2)};
+function idxAt(y){if(y<=centers[0])return 0;for(let j=0;j<centers.length-1;j++)if(y<centers[j+1])return j+(y-centers[j])/(centers[j+1]-centers[j]);return centers.length-1}
+function resize(){R.setSize(innerWidth,innerHeight,false);cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix();
+ pieces.forEach(g=>g.position.x=g.userData.x*Math.min(1,cam.aspect/1.4));meas()}
+addEventListener('resize',resize);addEventListener('load',resize);resize();
+
+const pcard=$('#pc');let cz=0,t=0;const k=reduce?0:1;
+function loop(){t+=.016;
+ const tz=-idxAt(scrollY+innerHeight/2)*GAP,vel=tz-cz;cz+=reduce?vel:vel*.07;
+ cam.position.set(mx*1.2*k+Math.sin(cz*.04)*.8*k,-my*.8*k+Math.cos(cz*.05)*.5*k,cz);
+ cam.lookAt(mx*2*k,-my*1.2*k,cz-12);
+ cam.fov=65+Math.min(22,Math.abs(vel)*.35*k);cam.updateProjectionMatrix();
+ rings.forEach((r,i)=>r.rotation.z+=(i%2?.0022:-.0022)*k);
+ pieces.forEach((g,i)=>{g.rotation.y=t*.28*(i%2?-1:1)*k;g.rotation.x=t*.13*k;g.children.forEach((c,j)=>{if(i===2)c.rotation.y=t*(.5+j*.3)*k})});
+ if(pcard&&fine)pcard.style.transform=`perspective(1000px) rotateY(${mx*9*k}deg) rotateX(${-my*7*k}deg)`;
+ $('#dp').textContent=String(Math.round(-cz)).padStart(4,'0');
+ const h=document.documentElement.scrollHeight-innerHeight;
+ const p=h>0?scrollY/h*100:0;$('#sc').textContent=String(Math.round(p)).padStart(3,'0');$('#bar').style.width=p+'%';
+ R.render(S,cam);requestAnimationFrame(loop)}
+loop();
+}catch(e){console.warn('WebGL unavailable',e);document.documentElement.classList.add('nogl');document.body.classList.add('nogl')}
+</script>
+</body>
+</html>
