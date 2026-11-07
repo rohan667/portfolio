@@ -2,7 +2,7 @@
 
 An immersive 3D portfolio for a computer engineering student working in cyber threat intelligence, ethical hacking and web design.
 
-**Live site:** https://comforting-mermaid-2b6003.netlify.app
+**Live site:** https://rohan-joseph.netlify.app
 
 ## Features
 - Scroll-driven 3D flight through a data tunnel, with a new 3D object for each section (Three.js)
